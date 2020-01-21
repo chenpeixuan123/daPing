@@ -1,0 +1,208 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+
+.menu {
+    width: 296px;
+    height: 100%;
+    background: rgba(19, 79, 141, 1);
+    padding-left: 27px;
+    padding-top: 38px;
+    z-index: 9999;
+    position: fixed
+}
+
+.btit {
+    width: 239px;
+    height: 25px;
+    font-size: 22px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 23px;
+    margin-bottom: 19px;
+    white-space: nowrap;/*内容超宽后禁止换行显示*/
+    overflow: hidden;/*超出部分隐藏*/
+    text-overflow:ellipsis;/*文字超出部分以省略号显示*/
+}
+
+.btit:hover{
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    text-overflow:clip;/*文字超出部分以省略号显示*/
+    width: 296px;
+}
+.prev{
+    position: absolute;
+    bottom: 212px;
+    right: 76px;
+    text-align: center;
+    width:66px;
+    font-size: 18px;
+    height:36px;
+    background:rgba(255,255,255,1);
+    opacity:0.6;
+    border-radius:8px;
+    z-index: 9999;
+}
+.next{
+    position: absolute;
+    bottom: 175px;
+    right: 76px;
+    text-align: center;
+    width:66px;
+    font-size: 18px;
+    height:36px;
+    background:rgba(255,255,255,1);
+    opacity:0.6;
+    border-radius:8px;
+    color: black;
+    z-index: 9999;
+}
+.pageShow{
+    height: 38px;
+    line-height: 38px;
+}
+.close{
+    text-align: center;
+    width:66px;
+    font-size: 18px;
+    height:36px;
+    background:rgba(255,255,255,1);
+    opacity:0.6;
+    border-radius:8px;
+    position: absolute;
+    bottom: 137px;
+    right: 76px;
+    z-index: 9999;
+}
+.butclose{
+    position: absolute;
+    bottom: 137px;
+    right: 71px;
+    z-index: 9999;
+    width: 78px;
+    height: 34px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(90,147,174,1);
+    line-height: 34px;
+    text-align: center;
+
+}
+.menuright {
+    position: absolute;
+    bottom: 89px;
+    right: 75px;
+    width: 66px;
+    height: 38px;
+    opacity: 0.6;
+    z-index: 9999;
+}
+.menuright:hover{
+    opacity: 1;
+}
+.menuright img {
+    width: 100%;
+}
+.imgright{
+    width: 73px;
+    height: 73px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    position: fixed
+}
+.imgleft{
+    width: 73px;
+    height: 73px;
+    position: absolute;
+    top: 50%;
+    left:296px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    position: fixed
+}
+
+.imgright img{
+    width: 100%;
+}
+.title{
+    position:absolute;
+    left:87px;
+    top: 4%;
+    width:310px;
+    height:31px;
+    font-size:30px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(254,253,253,1);
+    line-height:14px;
+}
+.zcfzze{
+    height: 33.3%;
+    padding: 10px;
+}
+.zcfzzeName{
+    font-size: 16px;
+    color: #FEFDFD;
+    margin: 10px;
+
+}
+.zcfzzeValue{
+    font-size: 30px;
+    color: #FCEA87;
+    margin: 10px;
+ }
+.ring{
+    left: 23px;
+    top:13px;
+    width: 508px;
+    height: 310px;
+    position: absolute
+
+}
+.chartsName{
+     color: #00AEFF;
+     font-size: 19px;
+     font-family: MicrosoftYaHei-Bold;
+     padding-left: 20px;
+     padding-top: 20px;
+     margin-left: 10px;
+ }
+.chartsName1{
+    color: #00AEFF;
+    font-size: 19px;
+    font-family: MicrosoftYaHei-Bold;
+}
+.line{
+margin-left:-5px ;
+
+}
+.ulli{
+height: 25px;
+}
+.ycbk{
+    position:absolute;
+    right: 13px;
+    top: 35px;
+    /*z-index: -999;*/
+}
+.runNums{
+    position:absolute;
+    font-size: 40px;
+    letter-spacing: 43px;
+    color: #ECD998;
+    right: 35px;
+}
+.runNums1{
+    position:absolute;
+    font-size: 40px;
+    color: #ECD998;
+    top: 4px;
+    right: 5px;
+}
+

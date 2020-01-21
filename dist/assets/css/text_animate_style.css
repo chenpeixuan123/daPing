@@ -1,0 +1,110 @@
+.animate_text{
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 3840px;
+  top:250px;
+  font-family: '	Microsoft YaHei';
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-fill-color: #146485;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  letter-spacing: 10px;
+  opacity:0;
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+}
+
+ .animate_text:nth-child(30) {
+  font-size: 120px;
+}
+ .animate_text:nth-child(29) {
+  font-size: 117px;
+}
+ .animate_text:nth-child(28) {
+  font-size: 114px;
+}
+ .animate_text:nth-child(27) {
+  font-size: 111px;
+}
+ .animate_text:nth-child(26) {
+  font-size: 108px;
+}
+ .animate_text:nth-child(25) {
+  font-size: 105px;
+}
+ .animate_text:nth-child(24) {
+  font-size: 102px;
+}
+ .animate_text:nth-child(23) {
+  font-size: 99px;
+}
+ .animate_text:nth-child(22) {
+  font-size: 96px;
+}
+ .animate_text:nth-child(21) {
+  font-size: 93px;
+}
+ .animate_text:nth-child(20) {
+  font-size: 90px;
+}
+ .animate_text:nth-child(19) {
+  font-size: 87px;
+}
+ .animate_text:nth-child(18) {
+  font-size: 84px;
+}
+ .animate_text:nth-child(17) {
+  font-size: 81px;
+}
+ .animate_text:nth-child(16) {
+  font-size: 78px;
+}
+ .animate_text:nth-child(15) {
+  font-size: 75px;
+}
+ .animate_text:nth-child(14) {
+  font-size: 72px;
+}
+ .animate_text:nth-child(13) {
+  font-size: 69px;
+}
+ .animate_text:nth-child(12) {
+  font-size: 66px;
+}
+ .animate_text:nth-child(11) {
+  font-size: 63px;
+}
+ .animate_text:nth-child(10) {
+  font-size: 60px;
+}
+ .animate_text:nth-child(9) {
+  font-size: 57px;
+}
+ .animate_text:nth-child(8) {
+  font-size: 54px;
+}
+ .animate_text:nth-child(7) {
+  font-size: 51px;
+}
+ .animate_text:nth-child(6) {
+  font-size: 48px;
+}
+ .animate_text:nth-child(5) {
+  font-size: 45px;
+}
+ .animate_text:nth-child(4) {
+  font-size: 42px;
+}
+ .animate_text:nth-child(3) {
+  font-size: 39px;
+}
+ .animate_text:nth-child(2) {
+  font-size: 36px;
+}
+ .animate_text:nth-child(1) {
+  font-size: 33px;
+}

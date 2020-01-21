@@ -1,0 +1,206 @@
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/common/bg5.jpg');
+  font-size: 0px;
+}
+
+.root>div {
+  font-size: 20px;
+  color: #fff;
+}
+
+.bgvideo{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  font-size: 0px;
+  display: inline-block;
+  height: 50%;
+  width: 25%;
+}
+
+.Middle {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+.Right {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+}
+
+.LeftTop {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding-top: 100px;
+}
+
+.LeftDown {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding-top: 40px;
+}
+
+.ltTitle {
+  position: absolute;
+}
+
+.ltTitleH {
+  font-family: 黑体;
+  font-size: 23px;
+}
+
+.ltValue {
+  font-family: Arial black;
+  font-size: 38px;
+}
+
+.ltUnit {
+  font-family: 黑体;
+  font-size: 23px;
+  vertical-align: 2px;
+}
+
+.ltChart {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.leftDown_Pie {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.leftDown_Pie_Title {
+  height: 20%;
+}
+
+.leftDown_Pie_chart {
+  height: 80%;
+  width: 60%;
+}
+
+.r_custom {
+  font-size: 32px;
+}
+
+.all_title_con {
+  position: absolute;
+}
+
+.all_title {
+  font-family: 黑体;
+  font-size: 1em;
+}
+
+.all_num {
+  font-family: Arial black;
+  font-size: 1.6em;
+}
+
+.right_paddingLeft {
+  transform: translateX(60px)
+}
+
+.r_chart {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  width: 94%;
+  height: 45%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.realtimeLine {
+  width: 100%;
+  height: 90%;
+}
+
+.mid_ld {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 50%;
+  height: 50%;
+}
+
+.mid_rt {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: 50%;
+}
+
+.mid_title {
+  font-family: 黑体;
+  font-size: 1em;
+}
+
+.mid_num {
+  font-family: Arial black;
+  font-size: 3em;
+}
+
+.webYesterdayRadio {
+  position: absolute;
+  left: 550px;
+  top: 100px;
+}
+
+.webYesterdayRadio>h3 {
+  font-family: "黑体";
+  font-size: 22px;
+}
+
+.webYesterdayRadio>p {
+  font-family: "Impact";
+  font-size: 30px;
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+.webYesterdayRadio img {
+  display: inline;
+  margin-right: 10px;
+}
+
+.mid_shop_num {
+  position: absolute;
+  left: 1450px;
+  bottom:150px;
+  font-size: 24px;
+}
+
+.mid_employee_num {
+  position: absolute;
+  left: 1450px;
+  bottom:100px;
+  font-size: 24px;
+}
+.arrow{
+  animation: start 1.5s infinite ease-in-out;
+  transform-origin: 50% 50%;
+  
+}

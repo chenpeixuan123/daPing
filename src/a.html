@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+    arr1=["甘肃银行股份有限公司张掖分行(一级分支行)",
+        "甘肃银行股份有限公司甘南分行(一级分支行)",
+        "甘肃银行股份有限公司武威分行(一级分支行)",
+        "甘肃银行股份有限公司临夏分行(一级分支行)",
+        "甘肃银行股份有限公司陇南分行(一级分支行)",
+        "甘肃银行股份有限公司金昌支行(一级分支行)",
+        "甘肃银行股份有限公司嘉峪关分行(一级分支行)",
+        "甘肃银行股份有限公司定西分行(一级分支行)",
+        "甘肃银行股份有限公司酒泉分行(一级分支行)",
+        "甘肃银行股份有限公司天水分行(一级分支行)",
+        "甘肃银行股份有限公司庆阳分行(一级分支行)",
+        "甘肃银行股份有限公司白银分行(一级分支行)",
+        "甘肃银行股份有限公司平凉分行(一级分支行)",
+        "甘肃银行股份有限公司兰州市兴陇支行(一级分支行)",
+        "甘肃银行股份有限公司兰州新区支行(一级分支行)",
+        "甘肃银行股份有限公司兰州市西固支行(一级分支行)",
+        "甘肃银行股份有限公司兰州市安宁支行(一级分支行)",
+        "甘肃银行股份有限公司兰州市高新支行(一级分支行)",
+        "甘肃银行股份有限公司兰州市城关支行(一级分支行)",
+        "甘肃银行股份有限公司兰州市七里河支行(一级分支行)",
+        "甘肃银行股份有限公司兰州市中央广场支行(一级分支行)",
+        "甘肃银行股份有限公司营业部(一级分支行)",
+        "甘肃银行股份有限公司"];
+    arr2 = [
+        "甘肃银行股份有限公司",
+        "甘肃银行股份有限公司营业部",
+        "兰州市中央广场支行",
+        "兰州市七里河支行",
+        "兰州市安宁支行",
+        "兰州市城关支行",
+        "兰州市高薪支行",
+        "兰州市西固支行",
+        "兰州市兴陇支行",
+        "兰州新区支行",
+        "嘉峪关分行",
+        "临夏分行",
+        "白银分行",
+        "定西分行",
+        "甘南分行",
+        "金昌支行",
+        "酒泉分行",
+        "陇南分行",
+        "平凉分行",
+        "庆阳分行",
+        "天水分行",
+        "武威分行",
+        "张掖分行"
+    ]
+    function ScreenSaver(settings){
+
+        this.settings = settings;
+
+        this.nTimeout = this.settings.timeout;
+
+        document.body.screenSaver = this;
+        // link in to body events
+        document.body.onmousemove = ScreenSaver.prototype.onevent;
+        document.body.onmousedown = ScreenSaver.prototype.onevent;
+        document.body.onkeydown = ScreenSaver.prototype.onevent;
+        document.body.onkeypress = ScreenSaver.prototype.onevent;
+
+        var pThis = this;
+        var f = function(){pThis.timeout();}
+        this.timerID = window.setTimeout(f, this.nTimeout);
+    }
+    ScreenSaver.prototype.timeout = function(){
+        if ( !this.saver ){
+            window.location = 'www.baidu.com';
+        }
+    }
+    ScreenSaver.prototype.signal = function(){
+        if ( this.saver ){
+            this.saver.stop();
+        }
+
+        window.clearTimeout(this.timerID);
+
+        var pThis = this;
+        var f = function(){pThis.timeout();}
+        this.timerID = window.setTimeout(f, this.nTimeout);
+    }
+
+    ScreenSaver.prototype.onevent = function(e){
+        this.screenSaver.signal();
+    }
+
+
+    var saver;
+    function initScreenSaver(){
+        //blort;
+        saver = new ScreenSaver({timeout:5000});   //无动作时间
+    }
+    window.onload = function(){
+        initScreenSaver();
+    }
+</script>
+
+lsjdlj
+
+
+</head>
+<body>
+
+</body>
+</html>

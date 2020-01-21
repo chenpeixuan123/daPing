@@ -1,0 +1,35 @@
+.start,.end{
+  position:absolute;  
+  top:0px;
+  font-family: "Arial Bold";
+  font-size: 18px;
+}
+.start{
+  left: 0;
+}
+.end{
+  right:0;
+}
+
+.startTime,.endTime{
+  position:absolute; 
+  top:110px;
+}
+.startTime{
+  left: 0;
+  text-align: left;
+}
+.endTime{
+  right:0;
+  text-align: right;
+}
+
+.date{
+  font-family: "Arial black";
+  font-size: 14px;
+}
+.time{
+  font-family: "Arial black";
+  font-size: 24px;
+  margin-left: 15px;
+}

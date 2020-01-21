@@ -1,0 +1,176 @@
+.root{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('/assets/images/common/bg5.jpg'); */
+}
+.logo{
+  position: absolute;
+  left:1762px;
+  top:30px;
+}
+.bgvideo{
+  position: absolute;
+  left:0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.webTradingVolume{
+  position: absolute;
+  left: 60px;
+  top: 80px;
+}
+.webTradingVolume>h3{
+  font-family: "黑体";
+  font-size: 24px; 
+}
+.webTradingVolume>p{
+  font-family: "Arial Black";
+  font-size: 80px;  
+}
+
+.webYesterdayRadio{
+  position: absolute;
+  left: 550px;
+  top: 130px;
+}
+.webYesterdayRadio>h3{
+  font-family: "黑体";
+  font-size: 22px;
+}
+.webYesterdayRadio>p{
+  font-family: "Impact";
+  font-size: 36px;
+  color: #ff0000;
+  margin-top: 10px;
+}
+.webYesterdayRadio img{
+  display: inline;
+  margin-right: 10px;
+}
+.maxTradingVolume{
+  position: absolute;
+  left: 60px;
+  top: 250px;
+}
+.samePeriodTradingVolume{
+  position: absolute;
+  left: 540px;
+  top: 250px;
+}
+.maxTradingVolume>h3,
+.samePeriodTradingVolume>h3{
+  font-family: "黑体";
+  font-size: 24px;
+  color: #8cc7e9;
+}
+.maxTradingVolume>p,
+.samePeriodTradingVolume>p{
+  font-family: "Arial Black";
+  font-size: 60px;  
+}
+
+.realtimeMonitor{
+  position: absolute;
+  left: 60px;
+  top: 440px;
+}
+.realtimeMonitor>h3,
+.realtimeMonitor>p{
+  font-family: "黑体";
+  font-size: 24px;
+}
+
+
+.realtimeLine{
+  position: absolute;
+  left: 0px;
+  top:580px;
+  width: 960px;
+  height: 480px;
+}
+.map{
+  position: absolute;
+  left:960px;
+  top:150px;
+  width: 1440px;
+  height: 930px;
+}
+.webBankTradingVolumeRank{
+  position: absolute;
+  left:2425px;
+  top:300px;
+}
+.webBankTradingVolumeRankBg{
+  position: absolute;
+  left:2356px;
+  top: 165px;
+}
+.webBankTradingWaveRank{
+  position: absolute;
+  left:2376px;
+  top: 650px;
+}
+.webBankTradingWaveRankBg{
+  position: absolute;
+  left:2356px;
+  top: 620px;
+}
+.webBankTradingVolumeRank_title,
+.webBankTradingWaveRank_title{
+  font-family: "黑体";
+  font-size: 30px;
+}
+.webBankTradingVolumeRank_chart,
+.webBankTradingWaveRank_chart{
+  width: 350px;
+  /* height: 300px; */
+  height: 500px;
+}
+
+.webBankTradingVolumeRadio{
+  position: absolute;
+  left: 2930px;
+  top: 60px;
+}
+.webBankTradingAmountRadio{
+  position: absolute;
+  left: 3410px;
+  top: 60px;
+}
+.webBankTradingVolumeRadio_title,
+.webBankTradingAmountRadio_title{
+  font-family: "黑体";
+  font-size : 24px;
+}
+
+.webBankTradingVolumeRadio_chart,
+.webBankTradingAmountRadio_chart{
+  width: 400px;
+  height: 300px;
+}
+
+.thirdPartyPay{
+  position: absolute;
+  left: 2930px;
+  top: 440px;
+}
+.shortcutPay{
+  position: absolute;
+  left: 2930px;
+  top: 760px;
+}
+
+.thirdPartyPay_title,
+.shortcutPay_title{
+  font-family: "黑体";
+  font-size: 24px;
+}
+
+.thirdPartyPay_chart,
+.shortcutPay_chart{
+  width: 890px;
+  height: 290px;
+}

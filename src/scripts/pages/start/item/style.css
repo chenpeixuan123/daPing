@@ -1,0 +1,54 @@
+.root{
+  width: 220;
+  height: 318px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 8px;  
+  position: relative;
+}
+
+.iconContianer{
+  position: relative;
+  padding: 30px;
+}
+
+.rotate{
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);  
+  -moz-transform: translateX(-50%) translateY(-50%);   
+  top: 50%;
+  left: 50%; 
+}
+
+ @-webkit-keyframes rotation{
+  from { -webkit-transform: translateX(-50%) translateY(-50%) rotate(0deg) }
+  to { -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg) }
+} 
+
+.rotateRun{
+  -webkit-transform: rotate(360deg);
+  animation: rotation 2s  infinite;
+  -moz-animation: rotation 2s  infinite;
+  -webkit-animation: rotation 2s  infinite;
+  -o-animation: rotation 2s  infinite; 
+}
+
+.logo{
+  display: block;
+}
+.title{
+  margin: 20px 0 0 0;
+  
+  text-align: center;
+  font-size: 24px;
+  font-family: "黑体"; 
+}
+.state{
+  margin: 10px 0 0 0;
+  text-align: center;
+  font-size: 24px;
+  font-family: "黑体"; 
+}

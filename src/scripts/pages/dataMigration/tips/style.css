@@ -1,0 +1,33 @@
+.root{
+  width: 834px;
+  height: 320px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 18px;
+  line-height: 2;
+}
+.title{
+  margin-bottom: 50px;
+  font-family: "黑体";
+  font-size: 36px;
+  text-align: center;
+   
+  width:750px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.state,.info{
+  font-size: 30px;
+}
+.info{
+  display: inline-block;
+  vertical-align:bottom;
+  line-height: 1.5;
+  width:580px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

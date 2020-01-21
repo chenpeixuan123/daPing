@@ -1,0 +1,36 @@
+.root{
+  position: relative;
+  /* width: 357px; */
+  height: 115px;  
+  padding-left: 6px;
+  margin-right: 30px;
+}
+.hr{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 115px;
+  background:linear-gradient(to bottom, rgba(255,255,255,0.2) , rgba(255,255,255,1)); 
+}
+.title{
+  font-family: "微软雅黑";
+  font-size: 16px;
+  padding-top: 44px;
+}
+.time{
+  margin-top: 10px;
+  font-family: "Arial Black";
+  font-size: 36px;
+}
+.off{
+  margin-left: 10px;
+  padding-left:15px;
+  padding-right:15px; 
+
+  font-family: "Arial Regular";
+  font-size: 14px;
+  background-color: #ee0000;
+
+  border-radius: 4px;
+}

@@ -1,0 +1,178 @@
+.root{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/common/bgSmall.jpg');
+}
+.bgvideo{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+}
+.titleWeb{
+  position: absolute;
+  left:60px;
+  top:60px;
+}
+.title23{
+  position: absolute;
+  left:1008px;
+  top:60px;
+}
+.itemBg1{
+  position: absolute;
+  left:60px;
+  top:484px;
+}
+.map{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 960px;
+  height: 750px;
+}
+
+.bandwidth{
+  position: absolute;
+  left:0px;
+  top: 750px;
+}
+.bandwidth_title{
+  margin-left: 60px;
+  font-family: "微软雅黑";
+  font-size: 24px;
+}
+.bandwidth_chart{
+  width: 960px;
+  height: 280px;
+}
+.contRate{
+  position: absolute;
+  left: 689px;
+  top: 111px;
+}
+.contRate>h3{
+  font-family: "微软雅黑";
+  font-size: 24px; 
+}
+.contRate>p{
+  font-family: "Arial Black";
+  font-size: 60px;  
+}
+.threeCenter{
+  position: absolute;
+  left: 1010px;
+  top: 53px;
+}
+.busV1{
+  position: absolute;
+  left: 1050px;
+  top: 370px;
+}
+.busV2{
+  position: absolute;
+  left: 1578px;
+  top: 370px;
+  width:330px;
+}
+.busV3{
+  position: absolute;
+  left: 1336px;
+  top: 645px;
+}
+.busV1>h3,
+.busV2>h3,
+.busV3>h3{
+  font-family: "微软雅黑";
+  font-size: 18px; 
+}
+.busV2>h3{
+  text-align: right;
+}
+
+.busV1>p,
+.busV2>p,
+.busV3>p{
+  font-family: "Arial Black";
+  font-size: 45px;  
+}
+.busV2>p{
+  text-align: right;
+}
+.ring{
+  position: absolute;
+  left: 960px;
+  top:750px;
+  width: 350px;
+  height: 280px;
+}
+.hr{
+  position: absolute;
+  left: 1050px;
+  top: 705px;
+  width: 788px;
+  height: 1px;
+  background:linear-gradient(to right, rgba(255,255,255,0.2) , rgba(255,255,255,1),rgba(255,255,255,0.2)); 
+}
+.systemNotice{
+  position: absolute;
+  left:1050px;
+  top:712px;
+}
+.gardenA{
+  position: absolute;
+  left: 1324px;
+  top:835px;
+}
+.gardenB{
+  position: absolute;
+  left: 1324px;
+  top:942px;
+}
+
+.slide{
+  width:64px;
+  height:24px;
+  animation: slide 1s infinite linear;
+  transform-origin: 50% 50%;
+  
+  -webkit-animation: slide 1s infinite linear;
+  -webkit-transform-origin: 50% 50%;
+
+  -moz-animation: slide 1s infinite linear;
+  -moz-transform-origin: 50% 50%;
+
+  -o-animation: slide 1s infinite linear;
+  -o-transform-origin: 50% 50%;
+
+  -ms-animation: slide 1s infinite linear;
+  -ms-transform-origin: 50% 50%;
+  
+} 
+@-ms-keyframes slide {
+    0%{-ms-transform: translate(0,0) rotate(-127deg);}
+    50% {-ms-transform: translate(48px,67px) rotate(-127deg);}
+    100% {-ms-transform: translate(119px,166px) rotate(-127deg);}
+}
+@-o-keyframes slide {
+    0%{-o-transform: translate(0,0) rotate(-127deg);}
+    50% {-o-transform: translate(48px,67px) rotate(-127deg);}
+    100% {-o-transform: translate(119px,166px) rotate(-127deg);}
+}
+@-webkit-keyframes slide {
+    0%{-webkit-transform: translate(0,0) rotate(-127deg);}
+    50% {-webkit-transform:translate(48px,67px) rotate(-127deg)}
+    100% {-webkit-transform:translate(119px,166px) rotate(-127deg);}
+}
+@-moz-keyframes slide {
+    0%{-moz-transform: translate(0,0) rotate(-127deg);}
+    50% {-moz-transform:translate(48px,67px) rotate(-127deg);}
+    100% {-moz-transform: translate(119px,166px) rotate(-127deg);}
+}
+@keyframes slide {
+    0%{transform: translate(0,0) rotate(-127deg);}
+    50% {transform: translate(48px,67px) rotate(-127deg);}
+    100% {transform:translate(119px,166px) rotate(-127deg);}
+}

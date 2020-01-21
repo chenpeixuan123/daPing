@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取近1个月的数据</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/moment.js"></script>
+    <style>
+        .red {
+            color: red;
+            line-height: 50px;
+        }
+        
+        #time {
+            text-decoration: underline;
+            font-size: 12px;
+        }
+        
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>msweb页面 统计上一个月 交易量、交易金额的支付宝，财付通值</h3>
+    <h4 id="time"></h4>
+    <hr>
+    <ul>
+        <li class="red">1、交易量(财付通&支付宝):</li>
+        <li>cft：<span class="jjl_cft">0</span> <br/>zfb：<span class="jjl_zfb">0</span></li>
+        <li class="red">2、交易额(财付通&支付宝):</li>
+        <li>cft：<span class="jje_cft">0</span> <br/>zfb：<span class="jje_zfb">0</span></li>
+    </ul>
+
+    <script>
+        // let startTime = moment().subtract(1, 'months').format("YYYY-MM-01 00:00:00");
+        // let endTime = moment(moment().format("YYYY-MM-01 00:00:00")).subtract(1, 'seconds').format("YYYY-MM-DD HH:mm:ss");
+        let startTime = moment().subtract(1, 'months').format("YYYY-MM-01 00:00:00");
+        let endTime = moment(moment().subtract(0, 'months').format("YYYY-MM-01 00:00:00")).subtract(1, 'seconds').format("YYYY-MM-DD HH:mm:ss");
+        //交易量
+        let jiaoYiLiang_Url = `http://10.7.161.22:8080/cloud-monitor/perf/getAllTD?kpiName=TD_CFTtps,TD_ZFBtps&startTime=${startTime}&endTime=${endTime}`;
+        //交易额
+        let jiaoYiE_Url = `http://10.7.161.22:8080/cloud-monitor/perf/getAllTD?kpiName=TD_CFTamt,TD_ZFBamt&startTime=${startTime}&endTime=${endTime}`;
+
+        //交易量
+        //let jiaoYiLiang_Url=`http://10.7.161.22:8080/cloud-monitor/perf/getAllTD?kpiName=TD_CFTtps,TD_ZFBtps&startTime=2017-11-01 00:00:00&endTime=2017-11-30 23:59:59`;
+        //交易额
+        //let jiaoYiE_Url=`http://10.7.161.22:8080/cloud-monitor/perf/getAllTD?kpiName=TD_CFTamt,TD_ZFBamt&startTime=2017-11-01 00:00:00&endTime=2017-11-30 23:59:59`;
+
+        //6月交易额(财付通&支付宝): 
+        //cft：890868795.9399769 //zfb：1569478021.7108924
+        //1、交易量(财付通&支付宝):
+        // cft：2939542 
+        // zfb：2130078
+        //数据时间段：2018-07-01 00:00:00~~2018-07-31 23:59:59
+        // 1、交易量(财付通&支付宝):
+        // cft：269873 
+        // zfb：58680
+        // 2、交易额(财付通&支付宝):
+        // cft：84408868.0499996 
+        // zfb：1399636.2999999959
+
+        $('#time').html(`数据时间段：${startTime}~~${endTime}`);
+        $.ajax({
+            type: 'GET',
+            url: jiaoYiE_Url,
+            dataType: "json",
+            data: {},
+            timeout: 60000 * 3, //超时时间设置，单位毫秒
+            contentType: "application/json",
+            success: function(data) {
+                let obj = data[0];
+                let cft = obj.TD_CFTamt; //arr[{time:"",value:"0"}]
+                let zfb = obj.TD_ZFBamt; //arr[{time:"",value:"0"}]
+                let sumcft = 0;
+                let sumzfb = 0;
+                for (let i = 0; i < cft.length; i++) {
+                    if (isNaN(cft[i].value)) {
+                        cft[i].value = 0;
+                    }
+                    sumcft += parseFloat(cft[i].value);
+                }
+                for (let i = 0; i < zfb.length; i++) {
+                    if (isNaN(zfb[i].value)) {
+                        zfb[i].value = 0;
+                    }
+                    sumzfb += parseFloat(zfb[i].value);
+                }
+                $('.jje_zfb').html(sumzfb);
+                $('.jje_cft').html(sumcft);
+            },
+            error: function(err) {
+                alert("ERR F12控制台");
+                console.log(err.statusText === "timeout" ? "交易额网络延时,请刷新" : err)
+                    // console.warn(+`=>网络延时,请刷新`)
+            }
+        });
+        $.ajax({
+            type: 'GET',
+            url: jiaoYiLiang_Url,
+            dataType: "json",
+            data: {},
+            timeout: 60000 * 3, //超时时间设置，单位毫秒
+            contentType: "application/json",
+            success: function(data) {
+                let obj = data[0];
+                let cft = obj.TD_CFTtps; //arr[{time:"",value:"0"}]
+                let zfb = obj.TD_ZFBtps; //arr[{time:"",value:"0"}]
+                let sumcft = 0;
+                let sumzfb = 0;
+                for (let i = 0; i < cft.length; i++) {
+                    if (isNaN(cft[i].value)) {
+                        cft[i].value = 0;
+                    }
+                    sumcft += parseFloat(cft[i].value);
+                }
+                for (let i = 0; i < zfb.length; i++) {
+                    if (isNaN(zfb[i].value)) {
+                        zfb[i].value = 0;
+                    }
+                    sumzfb += parseFloat(zfb[i].value);
+                }
+                $('.jjl_zfb').html(sumzfb);
+                $('.jjl_cft').html(sumcft);
+            },
+            error: function(err) {
+                alert("ERR F12控制台");
+                console.log(err.statusText === "timeout" ? "交易量网络延时,请刷新" : err)
+                    // console.warn(err.statusText+`=>网络延时,请刷新`)
+            }
+        });
+    </script>
+</body>
+
+</html>

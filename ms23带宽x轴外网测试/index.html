@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取近1个月的数据</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/moment.js"></script>
+    <style>
+        .red{
+            color: red;
+            line-height: 50px;
+        }
+        #time{
+            text-decoration: underline;
+            font-size: 12px;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let  SW_Outbps_N=[
+            {time:"2017-12-04T02:10:47Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.4569491744041443},{time:"2017-12-04T02:16:41Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.5254904627799988},{time:"2017-12-04T02:20:36Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.4707746207714081},{time:"2017-12-04T02:26:32Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.5070934295654297},{time:"2017-12-04T02:32:52Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.5029452443122864},{time:"2017-12-04T02:34:43Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.48632049560546875},{time:"2017-12-04T02:40:37Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.5585578083992004},{time:"2017-12-04T02:46:32Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.5162543654441833},{time:"2017-12-04T02:50:47Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.49471211433410645},{time:"2017-12-04T02:56:32Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.46864697337150574},{time:"2017-12-04T03:02:31Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":0.6004382371902466}
+        ];
+        console.log("移动in带宽:"+SW_Outbps_N.length+"条数据")
+    // let startTime = moment().subtract(1, 'months').format("YYYY-MM-01 00:00:00");
+    // let endTime = moment(moment().format("YYYY-MM-01 00:00:00")).subtract(1, 'seconds').format("YYYY-MM-DD HH:mm:ss");
+    let SW_Inbps_N=[
+            {"time":"2017-12-04T02:10:47Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.195939540863037},{"time":"2017-12-04T02:14:50Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.866117238998413},{"time":"2017-12-04T02:16:41Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.866117238998413},{"time":"2017-12-04T02:20:36Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":4.299570560455322},{"time":"2017-12-04T02:26:32Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":4.124663829803467},{"time":"2017-12-04T02:32:52Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.728520631790161},{"time":"2017-12-04T02:34:43Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":2.56335711479187},{"time":"2017-12-04T02:40:37Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":2.4568138122558594},{"time":"2017-12-04T02:46:32Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.1101582050323486},{"time":"2017-12-04T02:50:47Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.843369245529175},{"time":"2017-12-04T02:56:32Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.0453295707702637},{"time":"2017-12-04T03:02:31Z","name":"DCA-INT-GTM-F4000-01.gsbankchina.com - /Common/vlan_CMB","value":3.3497323989868164}
+        ]
+        console.log("移动in带宽:"+SW_Inbps_N.length+"条数据")
+    for (let i = 0; i < SW_Inbps_N.length; i++) {
+        console.log(moment(SW_Inbps_N[i].time).format("YYYY-MM-DD HH:mm:ss"));
+    }
+   
+    // let startTime = moment().subtract(1, 'months').format("YYYY-MM-01 00:00:00");
+    // let endTime = moment(moment().format("YYYY-MM-01 00:00:00")).subtract(1, 'seconds').format("YYYY-MM-DD HH:mm:ss");
+    let t1=moment(SW_Inbps_N[0].time).format("HH:mm");///10:10
+    let t2=moment(SW_Inbps_N[SW_Inbps_N.length-1].time).format("HH:mm");//11.02
+    // console.log(moment(t1).add(2,"minutes").format("HH:mm"));
+
+    let tS = moment(SW_Inbps_N[0].time);
+    let tE = moment(SW_Inbps_N[SW_Inbps_N.length-1].time);
+    let es=moment(tE-tS);
+    console.log((tE-tS)/1000);//3104000
+    let len=Math.round((tE-tS)/120000);////25.8
+    console.log(len);
+
+    console.log(tS.format("HH:mm"));
+    for(let i=0;i<len;i++){
+        // console.log(tS.format("HH:mm")+"-"+i);
+        console.log(tS.add(2,'minutes').format("HH:mm"));
+    }
+    // console.log(tS.format("HH:mm"));
+    // console.log(tS.add(2,"minute").format("HH:mm"));
+    // for (let i = 0; i < SW_Inbps_N.length; i++) {
+    //     // console.log(moment(SW_Inbps_N[i].time).format("YYYY-MM-DD HH:mm:ss"));
+    //     let t = moment(SW_Inbps_N[0].time).add(4*i, 'minutes').format("HH:mm");
+    //     console.log("--"+t);
+    // }
+</script>
+</body>
+</html>
